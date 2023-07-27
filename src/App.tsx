@@ -1,7 +1,18 @@
-import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './\bpages/Home'
+import New from './\bpages/New'
 
 function App() {
-  return <div>Hello World!</div>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/'>
+          <Route index element={<Home />} />
+          <Route path='new' element={<New />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
