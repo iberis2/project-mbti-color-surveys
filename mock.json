@@ -1,0 +1,287 @@
+{
+  "count": 71,
+  "next": "https://learn.codeit.kr/api/color-surveys/?limit=40&offset=40",
+  "previous": null,
+  "results": [
+    {
+      "createdAt": 1690462798000,
+      "updatedAt": 1690462798000,
+      "colorCode": "#90E2DC",
+      "id": 71,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1690444548000,
+      "updatedAt": 1690444548000,
+      "colorCode": "#6A8BFC",
+      "id": 70,
+      "mbti": "INFJ"
+    },
+    {
+      "createdAt": 1690350253000,
+      "updatedAt": 1690350253000,
+      "colorCode": "#000000",
+      "id": 69,
+      "mbti": "ISFJ"
+    },
+    {
+      "createdAt": 1690350236000,
+      "updatedAt": 1690350236000,
+      "colorCode": "#B5066E",
+      "id": 68,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1690266418000,
+      "updatedAt": 1690266418000,
+      "colorCode": "#6E9BF5",
+      "id": 67,
+      "mbti": "INTP"
+    },
+    {
+      "createdAt": 1690166612000,
+      "updatedAt": 1690166612000,
+      "colorCode": "#A3C9FD",
+      "id": 66,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1689757323000,
+      "updatedAt": 1689757323000,
+      "colorCode": "#000000",
+      "id": 65,
+      "mbti": "ESFP"
+    },
+    {
+      "createdAt": 1689742931000,
+      "updatedAt": 1689742931000,
+      "colorCode": "#123456",
+      "id": 64,
+      "mbti": "ISFP"
+    },
+    {
+      "createdAt": 1689666073000,
+      "updatedAt": 1689666073000,
+      "colorCode": "#6B4AE3",
+      "id": 63,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1689599471000,
+      "updatedAt": 1689599471000,
+      "colorCode": "#000000",
+      "id": 62,
+      "mbti": "ISTJ"
+    },
+    {
+      "createdAt": 1689599466000,
+      "updatedAt": 1689599466000,
+      "colorCode": "#9D5877",
+      "id": 61,
+      "mbti": "ESFP"
+    },
+    {
+      "createdAt": 1689595502000,
+      "updatedAt": 1689595502000,
+      "colorCode": "#000000",
+      "id": 60,
+      "mbti": "INFP"
+    },
+    {
+      "createdAt": 1689595368000,
+      "updatedAt": 1689595368000,
+      "colorCode": "#000000",
+      "id": 59,
+      "mbti": "INFP"
+    },
+    {
+      "createdAt": 1689583427000,
+      "updatedAt": 1689583427000,
+      "colorCode": "#ABCD00",
+      "id": 58,
+      "mbti": "ENFJ"
+    },
+    {
+      "createdAt": 1689583231000,
+      "updatedAt": 1689583231000,
+      "colorCode": "#ABCD00",
+      "id": 57,
+      "mbti": "ENFJ"
+    },
+    {
+      "createdAt": 1689583218000,
+      "updatedAt": 1689583218000,
+      "colorCode": "#ABCD00",
+      "id": 56,
+      "mbti": "ENFJ"
+    },
+    {
+      "createdAt": 1689573003000,
+      "updatedAt": 1689573003000,
+      "colorCode": "#ABCDEF",
+      "id": 55,
+      "mbti": "ENFP"
+    },
+    {
+      "createdAt": 1689300048000,
+      "updatedAt": 1689300048000,
+      "colorCode": "#2B0588",
+      "id": 54,
+      "mbti": "ISTJ"
+    },
+    {
+      "createdAt": 1689300035000,
+      "updatedAt": 1689300035000,
+      "colorCode": "#C346EB",
+      "id": 53,
+      "mbti": "INTP"
+    },
+    {
+      "createdAt": 1689253332000,
+      "updatedAt": 1689253332000,
+      "colorCode": "#6C4642",
+      "id": 52,
+      "mbti": "ESFJ"
+    },
+    {
+      "createdAt": 1689229734000,
+      "updatedAt": 1689229734000,
+      "colorCode": "#000000",
+      "id": 51,
+      "mbti": "INTP"
+    },
+    {
+      "createdAt": 1689206176000,
+      "updatedAt": 1689206176000,
+      "colorCode": "#A3D6D9",
+      "id": 50,
+      "mbti": "ENFP"
+    },
+    {
+      "createdAt": 1689165143000,
+      "updatedAt": 1689165143000,
+      "colorCode": "#D164F0",
+      "id": 49,
+      "mbti": "ESFP"
+    },
+    {
+      "createdAt": 1689165133000,
+      "updatedAt": 1689165133000,
+      "colorCode": "#D77713",
+      "id": 48,
+      "mbti": "ISFJ"
+    },
+    {
+      "createdAt": 1689165110000,
+      "updatedAt": 1689165110000,
+      "colorCode": "#4FE722",
+      "id": 47,
+      "mbti": "INFP"
+    },
+    {
+      "createdAt": 1689165104000,
+      "updatedAt": 1689165104000,
+      "colorCode": "#E4BE33",
+      "id": 46,
+      "mbti": "ISTJ"
+    },
+    {
+      "createdAt": 1689165100000,
+      "updatedAt": 1689165100000,
+      "colorCode": "#000000",
+      "id": 45,
+      "mbti": "ISTJ"
+    },
+    {
+      "createdAt": 1688991775000,
+      "updatedAt": 1688991775000,
+      "colorCode": "#904FF1",
+      "id": 44,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1688991717000,
+      "updatedAt": 1688991717000,
+      "colorCode": "#000000",
+      "id": 43,
+      "mbti": "ISTJ"
+    },
+    {
+      "createdAt": 1688892262000,
+      "updatedAt": 1688892262000,
+      "colorCode": "#9C996B",
+      "id": 42,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1688892252000,
+      "updatedAt": 1688892252000,
+      "colorCode": "#C42142",
+      "id": 41,
+      "mbti": "ESTJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#33A560",
+      "id": 40,
+      "mbti": "ESFJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#F011E5",
+      "id": 39,
+      "mbti": "ISTP"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#771880",
+      "id": 38,
+      "mbti": "INFJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#DB72B0",
+      "id": 37,
+      "mbti": "ENTJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#AAF9A3",
+      "id": 36,
+      "mbti": "INFJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#457E5A",
+      "id": 35,
+      "mbti": "ESFP"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#C842CA",
+      "id": 34,
+      "mbti": "ENFJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#4A2FE0",
+      "id": 33,
+      "mbti": "ESFJ"
+    },
+    {
+      "createdAt": 1688696613000,
+      "updatedAt": 1688696613000,
+      "colorCode": "#DC7970",
+      "id": 32,
+      "mbti": "INTP"
+    }
+  ]
+}
