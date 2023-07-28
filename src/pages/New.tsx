@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MBTISelect from '../components/MBTISelect'
 import generateColorCode from '../utils/generateColorCode'
+import ColorInput from '../components/ColorInput'
 
 function New() {
   const [formValue, setFormValue] = useState({
@@ -46,10 +47,9 @@ function New() {
       <button type='button' onClick={handleRandomClick}>
         <img src='/images/repeat.svg' alt='랜덤' />
       </button>
-      <input
-        name={formValue.colorCode}
-        onBlur={handleColorCodeBlur}
-        onChange={e => handleChange('colorCode', e.target.value)}
+      <ColorInput
+        value={formValue.colorCode}
+        onChange={(value: string) => handleChange('colorCode', value)}
       />
       <button type='submit' onClick={handleSubmit}>
         컬러 등록
