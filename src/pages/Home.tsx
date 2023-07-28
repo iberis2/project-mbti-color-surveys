@@ -1,11 +1,28 @@
 import { Link } from 'react-router-dom'
-import mock from '../mock.json'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ColorSurvey from '../components/ColorSurvey'
+import { getData } from '../api/api'
 import styles from './Home.module.css'
 
+type itemsType = {
+  colorCode: string
+  createdAt: number
+  id: number
+  mbti: string
+  updatedAt: number
+}[]
+
 function Home() {
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState<null | string>(null)
+  const [items, setItems] = useState<itemsType>([])
+
+  useEffect(() => {
+    ;(async (mbti: string | null) => {
+      const response: itemsType = await getData(mbti)
+      setItems(response)
+    })(filter)
+  }, [filter])
+
   return (
     <div className={styles.container}>
       <div className={styles.headerContainer}>
@@ -16,7 +33,7 @@ function Home() {
           </h1>
           <div>
             {filter && (
-              <button className={styles.filter} type='button' onClick={() => setFilter('')}>
+              <button className={styles.filter} type='button' onClick={() => setFilter(null)}>
                 {filter}
                 <img className={styles.removeIcon} src='/images/x.svg' alt='필터 삭제' />
               </button>
@@ -29,7 +46,7 @@ function Home() {
           + 새 컬러 등록하기
         </Link>
         <ul className={styles.items}>
-          {mock.map(item => (
+          {items.map(item => (
             <ColorSurvey key={item.id} value={item} onClick={() => setFilter(item.mbti)} />
           ))}
         </ul>
