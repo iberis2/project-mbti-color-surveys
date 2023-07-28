@@ -1,16 +1,18 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import MBTISelect from '../components/MBTISelect'
 import generateColorCode from '../utils/generateColorCode'
 import ColorInput from '../components/ColorInput'
 import styles from './New.module.css'
 import Button from '../components/common/Button'
+import { postData } from '../api/api'
 
 function New() {
   const [formValue, setFormValue] = useState({
     mbti: 'ESTJ',
     colorCode: '#000000',
   })
+  const navigate = useNavigate()
 
   const handleChange = (type: 'colorCode' | 'mbti', value: string) => {
     setFormValue(prev => {
@@ -23,9 +25,13 @@ function New() {
     handleChange('colorCode', nextColorCode)
   }
 
-  const handleSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
-    console.log('formValue', formValue)
+    const response = await postData(formValue)
+    if (response) {
+      return navigate('/')
+    }
+    return alert('컬러 등록에 실패했습니다. 잠시 후 다시 시도해주세요.')
   }
 
   return (

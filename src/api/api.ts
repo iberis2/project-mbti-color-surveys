@@ -10,3 +10,20 @@ export const getData = async (mbti: string | null) => {
     console.log('data load error', error)
   }
 }
+
+type formValueType = {
+  mbti: string
+  colorCode: string
+}
+
+export const postData = async (formValue: formValueType) => {
+  try {
+    const { status } = await axios.post('/color-surveys/', {
+      ...formValue,
+      password: '0000',
+    })
+    return status === 201
+  } catch (error: unknown) {
+    console.log('data post error', error)
+  }
+}
