@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import mock from '../mock.json'
 import { useState } from 'react'
+import ColorSurvey from '../components/ColorSurvey'
 
 function Home() {
   const [filter, setFilter] = useState('')
@@ -18,10 +19,7 @@ function Home() {
       </div>
       <ul>
         {mock.map(item => (
-          <li key={item.id} onClick={() => setFilter(item.mbti)}>
-            {item.id}
-            {item.mbti} --- {item.colorCode}
-          </li>
+          <ColorSurvey key={item.id} value={item} onClick={() => setFilter(item.mbti)} />
         ))}
       </ul>
     </div>
