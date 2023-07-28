@@ -21,13 +21,6 @@ function New() {
     handleChange('colorCode', nextColorCode)
   }
 
-  const handleColorCodeBlur = () => {
-    const isValidColorCode = /^#[a-f0-9]{6}$/i.test(formValue.colorCode)
-    if (!isValidColorCode) {
-      handleChange('colorCode', '#000000')
-    }
-  }
-
   const handleSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault()
     console.log('formValue', formValue)
