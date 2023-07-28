@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import MBTISelect from '../components/MBTISelect'
 import generateColorCode from '../utils/generateColorCode'
 import ColorInput from '../components/ColorInput'
+import styles from './New.module.css'
+import Button from '../components/common/Button'
 
 function New() {
   const [formValue, setFormValue] = useState({
@@ -27,26 +29,34 @@ function New() {
   }
 
   return (
-    <div>
-      <h1>새 컬러 등록하기</h1>
-      <Link to='/'>
-        <img src='/images/x.svg' alt='취소' />
-      </Link>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.heading}>새 컬러 등록하기</h1>
+        <Link className={styles.cancel} to='/'>
+          <img className={styles.cancelIcon} src='/images/x.svg' alt='취소' />
+        </Link>
+      </header>
 
-      <h2>MBTI</h2>
-      <MBTISelect value={formValue.mbti} onChange={newMBTI => handleChange('mbti', newMBTI)} />
+      <section className={styles.section}>
+        <h2 className={styles.sectionHeading}>MBTI</h2>
+        <MBTISelect value={formValue.mbti} onChange={newMBTI => handleChange('mbti', newMBTI)} />
+      </section>
 
-      <h2>컬러</h2>
-      <button type='button' onClick={handleRandomClick}>
-        <img src='/images/repeat.svg' alt='랜덤' />
-      </button>
-      <ColorInput
-        value={formValue.colorCode}
-        onChange={(value: string) => handleChange('colorCode', value)}
-      />
-      <button type='submit' onClick={handleSubmit}>
+      <section className={styles.section}>
+        <h2 className={styles.sectionHeading}>
+          컬러
+          <button className={styles.random} type='button' onClick={handleRandomClick}>
+            <img className={styles.repeatIcon} src='/images/repeat.svg' alt='랜덤' />
+          </button>
+        </h2>
+        <ColorInput
+          value={formValue.colorCode}
+          onChange={(value: string) => handleChange('colorCode', value)}
+        />
+      </section>
+      <Button className={styles.submit} onClick={handleSubmit}>
         컬러 등록
-      </button>
+      </Button>
     </div>
   )
 }
