@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import ColorSurvey from '../components/ColorSurvey'
-import { getData } from '../api/api'
+import { getData, getNextPageData } from '../api/api'
 import styles from './Home.module.css'
 
 type itemsType = {
@@ -15,12 +15,38 @@ type itemsType = {
 function Home() {
   const [filter, setFilter] = useState<null | string>(null)
   const [items, setItems] = useState<itemsType>([])
+  const nextPageRef = useRef<string | null>(null)
+  const isLoadingRef = useRef<boolean>(false)
+
+  const handleLoad = async (mbti: null | string) => {
+    const { results, next }: { results: itemsType; next: string | null } = await getData(mbti)
+    nextPageRef.current = next
+    setItems(results)
+  }
+
+  const handleLoadNext = async () => {
+    if (nextPageRef.current) {
+      const { results, next } = await getNextPageData(nextPageRef.current)
+      setItems(prev => [...prev, ...results])
+      nextPageRef.current = next
+    }
+  }
 
   useEffect(() => {
-    ;(async (mbti: string | null) => {
-      const response: itemsType = await getData(mbti)
-      setItems(response)
-    })(filter)
+    handleLoad(filter)
+    const handleScroll = async () => {
+      if (!nextPageRef.current || isLoadingRef.current) return
+      isLoadingRef.current = true
+      const maxScrollTop = document.documentElement.offsetHeight - window.innerHeight - 100
+      const currentScrollTop = document.documentElement.scrollTop
+      if (currentScrollTop >= maxScrollTop) {
+        await handleLoadNext()
+      }
+      isLoadingRef.current = false
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [filter])
 
   return (

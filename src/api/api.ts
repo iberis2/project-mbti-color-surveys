@@ -5,9 +5,18 @@ export const getData = async (mbti: string | null) => {
     const { data } = await axios.get('/color-surveys/', {
       params: { mbti, liit: 20 },
     })
-    return data.results
+    return data
   } catch (error: unknown) {
-    console.log('data load error', error)
+    console.log('fail to load data', error)
+  }
+}
+
+export const getNextPageData = async (url: string) => {
+  try {
+    const { data } = await axios.get(url)
+    return data
+  } catch (error) {
+    console.log('fail to load next page', error)
   }
 }
 
@@ -24,6 +33,6 @@ export const postData = async (formValue: formValueType) => {
     })
     return status === 201
   } catch (error: unknown) {
-    console.log('data post error', error)
+    console.log('fail to post data', error)
   }
 }
