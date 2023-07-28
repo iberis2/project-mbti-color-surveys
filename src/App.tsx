@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './\bpages/Home'
 import New from './\bpages/New'
+import './App.css'
 
 function App() {
   return (
